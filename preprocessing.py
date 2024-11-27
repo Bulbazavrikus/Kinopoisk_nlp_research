@@ -25,7 +25,7 @@ def lemmatize(st):
     return [morph_analyzer.parse(word)[0].normal_form for word in st.split()]
 
 
-def preprocessing(df, lemmatized = False, stop_words = False):
+def full_prep(df, lemmatized = False, stop_words = False):
     print('Удаление особых символов')
     df['content'] = df['content'].progress_apply(lambda st: re.sub(r'\n|\xa0|\nA', ' ', st))
     df['content'] = df['content'].progress_apply(lambda text: re.sub(r'[^\w\s,.!?]', '', text))
