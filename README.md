@@ -34,6 +34,7 @@ Due to the sparsity of the data, TF-IDF performed well only in binary classifica
 The large size of reviews necessitated limiting the number of tokens for BERT. However, the F1-score for multiclass classification was significantly higher, reaching 0.85 on a balanced dataset.
 
 ## Future updates
++ Data loading and code readability updates
 + Class balancing through data augmentation.  
 + Character-level vectorization for TF-IDF.  
 + Fine-tuning BERT to improve the differentiation between Neutral and Good classes.  
